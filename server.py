@@ -58,7 +58,7 @@ class OpcuaClientSimulator:
                 else:
                     value = random.uniform(0.0, 100.0)
                 
-                print(f"Simulated {name}: {round(value, 2)}")
+                #print(f"Simulated {name}: {round(value, 2)}")
                 socketio.emit('plant_data_update', {'name': name, 'value': round(value, 2)})
 
             # Use socketio.sleep, which is compatible with eventlet
